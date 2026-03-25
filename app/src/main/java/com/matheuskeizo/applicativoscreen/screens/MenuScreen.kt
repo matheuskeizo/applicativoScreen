@@ -42,7 +42,7 @@ fun MenuScreen(modifier: Modifier = Modifier, navController: NavController) {
                 .align(Alignment.Center)
         ) {
             Button(
-                onClick = {navController.navigate("perfil")},
+                onClick = {navController.navigate("perfil/Fulano de tal/27")}, //Esta enviando um valor junto com a navegação, sendo o parametro do "nome" na rota, e o "27" sendo a idade
                 colors = ButtonDefaults.buttonColors(Color.White),
                 modifier = Modifier.size(width = 200.dp, height = 48.dp)
             ) {
@@ -54,7 +54,7 @@ fun MenuScreen(modifier: Modifier = Modifier, navController: NavController) {
             }
             Spacer(modifier = Modifier.height(16.dp))
             Button(
-                onClick = { navController.navigate("pedidos")},
+                onClick = { navController.navigate("pedidos?cliente=Cliente XPTO")}, //pedidos é a rota de tela, ?cliente é o parametro e o Cliente XPTO é o valor passado ao parametro, sendo recebidos no PedidosScreen e pode ser usado em outras telas
                 colors = ButtonDefaults.buttonColors(Color.White),
                 modifier = Modifier.size(width = 200.dp, height = 48.dp)
             ) {

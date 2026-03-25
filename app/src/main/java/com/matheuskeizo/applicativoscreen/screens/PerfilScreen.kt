@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
 @Composable
-fun PerfilScreen(modifier: Modifier, navController: NavController){
+fun PerfilScreen(modifier: Modifier, navController: NavController, nome: String, idade: Int){ // adição do parametro nome e idade
     Box(
         modifier = modifier
             .fillMaxSize()
@@ -25,7 +25,7 @@ fun PerfilScreen(modifier: Modifier, navController: NavController){
             .padding(32.dp)
     ){
         Text(
-            text = "PEDIDOS",
+            text = "PERFIL - $nome tem $idade anos", //exibe as variaveis nome e a idade recebido no parametro
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
             color = Color.White
